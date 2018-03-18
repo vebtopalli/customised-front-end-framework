@@ -1,0 +1,7 @@
+@mixin anim-all($delay){
+  -webkit-transition: all $delay ease-out;
+  -moz-transition: all $delay ease-out;
+  -ms-transition: all $delay ease-out;
+  -o-transition: all $delay ease-out;
+  transition: all $delay ease-out;
+}

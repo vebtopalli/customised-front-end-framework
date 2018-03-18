@@ -1,0 +1,114 @@
+.center-block{
+  float:none!important;
+  margin:0 auto!important;
+}
+@media($tablet){
+  .center-block-md{
+    float:none!important;
+    margin:0 auto!important;
+  }
+}
+@media($mobile){
+  .center-block-sm{
+    float:none!important;
+    margin:0 auto!important;
+  }
+}
+
+.container-fluid {
+  margin:0 10px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+@media only screen and ($tablet) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and ($desktop) {
+  .container {
+    width: 70%;
+  }
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .col{
+    position:relative;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+  }
+}
+
+.row .col[class*="push-"], .row .col[class*="pull-"] {
+  position: relative;
+}
+
+@function ScreenSize($size) {
+  @if $size=='s'{
+    @return $mobile;
+  }@else if $size =='m'{
+    @return $tablet;
+  }@else{
+    @return $desktop;
+  }
+}
+
+@mixin ReturnColumWidth($col){
+  @if $col==1{
+    width:8.3333333333%;
+  }@else if $col==2{
+    width:16.6666666667%;
+  }@else if $col==3{
+    width:25%;
+  }@else if $col==4{
+    width:33.3333333333%;
+  }@else if $col==5{
+    width:41.6666666667%;
+  }@else if $col==6{
+    width:50%;
+  }@else if $col==7{
+    width:58.3333333333%;
+  }@else if $col==8{
+    width:66.6666666667%;
+  }@else if $col==9{
+    width:75%;
+  }@else if $col==10{
+    width:83.33333333%;
+  }@else if $col==11{
+    width:91.6666666667%;
+  }@else{
+    width:100%;
+  }
+}
+.row{
+  display:flex;
+  $screen:'s','m','l';
+  @each $size in $screen{
+      @media(ScreenSize($size)){
+          @for $i from 1 through 12{
+              .col.#{$size}#{$i}{
+                  @include ReturnColumWidth($i);
+                  margin-left: auto;
+                  left: auto;
+                  right: auto;
+              }
+          }
+      }
+  }
+}

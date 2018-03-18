@@ -1,0 +1,32 @@
+// grid rows
+@import './shared/_var';
+@import './shared/_grid';
+
+// shared
+@import './shared/_color';
+@import './shared/_mixin';
+@import './shared/_animations';
+@import './shared/_helper';
+
+//  components 
+
+// views_partial
+@import './partials/_header';
+@import './partials/_footer';
+
+// views static
+@import './views/static/home';
+
+// responsive
+@import './views/responsive/static_pages';
+
+body,html{
+    margin:0;
+    padding:0;
+    height:100%;
+    color:#20232a;
+}
+
+body{
+    background-color:#fff;
+}

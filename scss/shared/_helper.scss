@@ -1,0 +1,283 @@
+// list
+li{
+  list-style-type: none;
+}
+
+// hidden
+.hidden-all{
+  display: none;
+}
+@media (max-width: 601px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 601px) and (max-width: 993px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 993px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+// images v video
+img.rounded{
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+}
+
+
+img.img-responsive,
+video.video-responsive{
+  max-width: 100%;
+  height: auto;
+}
+
+
+.pull-left{
+  float:left!important;
+}
+
+.pull-right{
+  float:right!important;
+}
+
+
+// table
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  background-color: transparent;
+  thead{
+    tr{
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      th{
+        vertical-align: bottom;
+        border-bottom: 3px solid #ddd;
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        padding: 6px;
+        vertical-align: middle;
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        &:first-child{
+          border-left:1px solid #ddd;
+        }
+      }
+    }
+  }
+  th,td{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align:center;
+    border-collapse:collapse;
+  }
+  tr{
+    width:100%;
+  }
+}
+table.responsive-table{
+  &.hasEdit{
+    tbody tr{
+        @include anim-all(.5s);
+        &:hover{
+            cursor: pointer;
+            box-shadow: 1px 1px 7px 1px #000;
+        }
+    }
+  }
+   @media($tablet){
+     border:0!important;
+    thead{
+       display: none;
+     }
+     tbody{
+        tr{
+          width: 100%;
+          border: 1px solid #000;
+          margin: 30px 0;
+          float: left;
+          td{
+            float: left;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            &:first-child{
+              font-size:1.2em;
+            }
+          }
+          td:before {
+              content: attr(data-label);
+              font-weight: 500;
+              float: left;
+              font-weight: bold;
+              width: 100%;
+              text-align: center;
+              color: black;
+              font-weight: 500;
+          }
+        }
+     }
+   }
+}
+table.table_without_borders{
+  tr,td,th,tbody,thead{
+    border:0!important;
+  }
+}
+
+
+// content text
+
+.align-wrapper .align {
+  display: block;
+}
+
+.align-left{
+  text-align:left!important;
+}
+
+.align-right{
+  text-align:right!important;
+}
+
+.align-center{
+  text-align:center!important;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.circle{
+  border-radius: 50%;
+}
+
+.small-radius{
+  border-radius:5px!important;
+}
+
+@media(max-width:800px){
+    // align center on table+mobile
+    .center-mob{
+        text-align:center!important;
+    }
+  //make image fullwidth on table + mobile
+  .img_fullwidth-mob{
+    width:100%!important;
+    img{
+      width:100%!important;
+    }
+  }
+  .float_none-mob{
+    float:none!important;
+  }
+}
+
+
+
+.nomarg{
+  margin:0!important;
+}
+.nomarg-bottom{
+  margin-bottom:0!important;
+}
+.nomarg-top{
+  margin-top:0!important;
+}
+.nopadd{
+  padding:0!important;
+}
+.nopadd-left{
+  padding-left:0!important;
+}
+.nopadd-right{
+  padding-right:0!important;
+}
+
+.nopadd-mob{
+  @media($tablet){
+    padding:0!important;
+  }
+}
+
+.clear{
+  clear: both;
+}
+.clear-md{
+  @media($tablet){
+    clear: both!important;
+  }
+}
+.clear-xs{
+  @media($mobile){
+    clear: both!important;
+  }
+}
+.inline{
+  display: inline-block;
+}
+.fullwidth{
+  width:100%;
+}
+.fullheight{
+  min-height:100%;
+  height:100%;
+}
+
+
+.separator_line{
+  float:left;
+  background-color:#f8f8f8;
+  height:2px;
+}
+
+// height helper
+.height_10{
+  height:10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.height_20{
+  height:20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.height_50{
+  height:50px;
+  display: inline-block;
+  width: 100%;
+}
+
+.height_100{
+  height:100px;
+  display: inline-block;
+  width: 100%;
+}
+.height_200{
+  height:200px;
+  display: inline-block;
+  width: 100%;
+}
+
+
+.line_height-1{
+  line-height:1.5em;
+}
+

@@ -1,0 +1,38 @@
+$defc: #909090;
+$darkc: #151b26;
+$greyc: #ababab;
+$dangerc: rgba(241,0,0,0.92);
+$whitec: #fff;
+$blackc:#000;
+$bluec:#0a4d9a;
+$purplec:#6b6eac;
+
+//colors
+.blackc{
+  color:$blackc;
+}
+.greyc{
+  color:$greyc;
+}
+.bluec{
+  color:$bluec;
+}
+
+.defc,.standc{
+  color:$defc;
+}
+.darkc{
+  color: $darkc;
+}
+.purplec,.purple{
+  color: $purplec;
+}
+.dangerc{
+  color:$dangerc;
+}
+.whitec{
+  color:$whitec!important;
+  p,h1,h2,h3,h4,h5,h6{
+    color:$whitec!important;
+  }
+}
