@@ -39,7 +39,7 @@
 
 
 {
-	"version": 3,
+	"version": 1,
 	"file": "../scss/main.css",
 	"sources": [
 		"../scss/main.scss",
