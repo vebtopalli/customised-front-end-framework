@@ -97,7 +97,6 @@
   }
 }
 .row{
-  display:flex;
   $screen:'s','m','l';
   @each $size in $screen{
       @media(ScreenSize($size)){

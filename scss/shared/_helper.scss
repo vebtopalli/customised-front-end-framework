@@ -1,6 +1,10 @@
+
 // list
 li{
   list-style-type: none;
+}
+a{
+  text-decoration: none;
 }
 
 // hidden
@@ -53,53 +57,8 @@ table{
   border-spacing: 0;
   width: 100%;
   background-color: transparent;
-  thead{
-    tr{
-      border-top: 1px solid #ddd;
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
-      th{
-        vertical-align: bottom;
-        border-bottom: 3px solid #ddd;
-      }
-    }
-  }
-  tbody{
-    tr{
-      td{
-        padding: 6px;
-        vertical-align: middle;
-        border-top: 0;
-        border-bottom: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        &:first-child{
-          border-left:1px solid #ddd;
-        }
-      }
-    }
-  }
-  th,td{
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-    text-align:center;
-    border-collapse:collapse;
-  }
-  tr{
-    width:100%;
-  }
 }
 table.responsive-table{
-  &.hasEdit{
-    tbody tr{
-        @include anim-all(.5s);
-        &:hover{
-            cursor: pointer;
-            box-shadow: 1px 1px 7px 1px #000;
-        }
-    }
-  }
    @media($tablet){
      border:0!important;
     thead{
@@ -275,9 +234,3 @@ table.table_without_borders{
   display: inline-block;
   width: 100%;
 }
-
-
-.line_height-1{
-  line-height:1.5em;
-}
-

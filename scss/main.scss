@@ -4,7 +4,9 @@
 
 // shared
 @import './shared/_color';
+@import './shared/_fonts';
 @import './shared/_mixin';
+@import './shared/_buttons';
 @import './shared/_animations';
 @import './shared/_helper';
 
@@ -23,10 +25,4 @@
 body,html{
     margin:0;
     padding:0;
-    height:100%;
-    color:#20232a;
-}
-
-body{
-    background-color:#fff;
 }

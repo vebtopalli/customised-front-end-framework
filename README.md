@@ -38,8 +38,11 @@
 ```
 
 
+License
+This Framework is is open-sourced software licensed under the MIT license
+
 {
-	"version": 1,
+	"version": 3,
 	"file": "../scss/main.css",
 	"sources": [
 		"../scss/main.scss",
@@ -53,7 +56,3 @@
 		"../scss/partials/_footer.scss"
 	],
 }
-
-
-License
-This Framework is is open-sourced software licensed under the MIT license
